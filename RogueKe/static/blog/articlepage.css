@@ -1,0 +1,27 @@
+
+.articlecontainer{
+    min-width: 100%;
+}
+.container-fluid .row  .imagediv-articlepage img{
+    max-width: 100%;
+}
+/*.container-fluid .row .col-md-10{
+    padding-left: 60px;
+}*/
+.container-fluid .row h1{
+    margin-bottom: 40px;
+}
+.container-fluid .row .side-imagediv-articlepage img{
+    max-width: 100%;
+}
+#commentssection div{
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 30px;
+}
+.container-fluid .site-footer nav div{
+    min-width: 100%;
+}
+#button-div-comments{
+    margin: 0px;
+}

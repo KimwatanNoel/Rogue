@@ -1,0 +1,127 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ROGUE_KE</title>
+    <link rel="icon" type="image/jpeg" href="{% static 'blog/images/websitelogo.jpeg'%}"/>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!--JQUERY IMPORTED IT-->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!--font bootstrap social images-->
+    <link rel = "stylesheet" href = "{% static 'blog/allpagesstyles.css' %}" type = "text/css" />
+</head>
+<body>
+<nav class = "navbar navbar-inverse ">
+    <div class = "container-fluid " >
+        <div class = "navbar-header " >
+            <button type = "button" class = "navbar-toggle clearfix " data-toggle="collapse" data-target = "#barnavcol">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'RogueKe:index' %}">ROGUE_KE</a>
+        </div>
+
+        <div class = "collapse navbar-collapse" id = "barnavcol">
+            <ul class ="nav navbar-nav">
+               <li><a href = "{% url 'RogueKe:index' %}">HOME</a></li>
+                <li><a href = "{% url 'RogueKe:fashion' %}">FASHION</a></li>
+                <li><a href = "{% url 'RogueKe:sports' %}">SPORTS</a></li>
+                <li><a href = "{% url 'RogueKe:technology' %}">TECHNOLOGY</a></li>
+                <li><a href = "{% url 'RogueKe:lifestyle' %}">LIFESTYLE</a></li>
+                <li><a href = "{% url 'RogueKe:trending' %}">TRENDING</a></li>
+                <li class="active"><a HREF="{% url 'RogueKe:mantalk' %}">MAN-TALK</a></li>
+
+
+            </ul>
+            <ul class = "nav navbar-nav navbar-right">
+                <li><a href="https://m.facebook.com/Writers_galore-1842526302689513/" target="_blank" class = "icon-md fb-ic"><i class = "fa fa-facebook"></i></a></li>
+                <li><a href="#" target="_blank"  class = "icon-md tw-ic"><i class ="fa fa-twitter"></i></a></li>
+                <li><a href="#" target="_blank"  class = "icon-md in-ic"><i class = "fa fa-instagram"></i></a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<div class = "container secondcontainer">
+
+    <div class = "row ">
+        {% for man_item in man_item %}
+        <div class = "col-md-6 col-sm-6 col-xs-12 imagecol "><a href="#">
+            <img class ="columnimage" src = "{{ man_item.Man_Talk_Photo.url }}" /></a>
+        </div>
+        <div class = "col-md-6 col-sm-6 col-xs-12 ">
+            <article >
+                <!--REMEMBER Image Link Should be the same as header link-->
+                <footer ><small>{{ man_item.Date_Created }}</small></footer>
+                <header ><h1><a href = "#">{{ man_item.Title }}</a></h1></header>
+                <blockquote class="lead">
+                    {{ man_item.Article }}
+                    <footer>{{ man_item.Author }}</footer>
+                </blockquote>
+            </article>
+        </div>
+        {% endfor %}
+    </div>
+    <hr>
+
+
+</div>
+
+<footer >
+    <div class="text-center ">
+        <nav arial-lable="page navigation">
+            <ul  class="pagination pagination-md">
+                <li arial-lable="Previous">
+                    <a href="#" arial-hidden="true"><span>&laquo</span></a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li aria-label="Next">
+                    <a href="#" arial-hidden="true"><span>&raquo</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<footer class = "site-footer">
+    <nav class = "navbar navbar-inverse  navbarfooter" >
+        <div class="container-fluid footernav">
+            <div class="row ">
+                <div class="col-md-2"><a href="fashionpage.html">FASHION</a></div>
+                <div class="col-md-2"><a href="sportspage.html">SPORTS</a></div>
+                <div class="col-md-2"><a href="techpage.html">TECHNOLOGY</a></div>
+                <div class="col-md-2"><a href="lifestylepage.html">LIFESTYLE</a></div>
+                <div class="col-md-2"><a href="trendingpage.html">TRENDING</a></div>
+                <div class="col-md-2"><a href="mantalkpage.html">MAN-TALK</a></div>
+            </div>
+            <div class = "row POWERED">
+                <div class="col-md-12"><p></p></div>
+            </div>
+
+            <div class = "row POWERED">
+                <div class="col-md-12"><p><a href="#">POWERED BY RATANGA</a></p></div>
+            </div>
+        </div>
+    </nav>
+</footer>
+
+</body>
+</html>

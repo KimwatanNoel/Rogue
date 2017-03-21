@@ -1,0 +1,154 @@
+
+html,body{
+    height:100%;
+}
+.box{
+    border: 2px red dotted ;
+}
+.container-fluid{
+    min-height: 100%;
+}
+.navbar-inverse{
+    border-radius: 0px;
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+}
+/*.navbar-header{
+    padding-left:10px ;
+    padding-right:40px ;
+}*/
+.navbar-brand{
+    padding-left: 30px;
+}
+.secondcontainer{
+    max-width: 1100px;
+}
+/*Removing the space bellow the powered by Link */
+.navbarfooter{
+    min-height: 100px;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: -20px;
+}
+
+.footernav {
+    color: whitesmoke;
+    text-align: center;
+    margin: 0px;
+}
+
+.row{
+    min-height: 30px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.footernav a:link {
+    color:darkgray;
+    text-decoration: none;
+}
+.footernav a:visited{
+    color: darkgray;
+    text-decoration: none;
+}
+.footernav a:hover{
+    color: white;
+}
+.navbar-nav {
+    color: #b86607;
+}
+.indexpagejumbo{
+    margin:0px;
+    min-height: 200px;
+    max-height: 200px;
+    padding: 0px;
+    background-image: url("images/websitebackground.jpeg");
+
+}
+.indexpagejumbo img{
+    max-height:150px;
+    margin-top: 0px;
+    vertical-align: center;
+    align-items: center;
+}
+.jumbotron-image-div{
+    min-height: 100%;
+    margin: 0px;
+    padding: 23px;
+}
+
+.img-rounded{
+    img-size: cover;
+    margin: -10px;
+    padding: 0px;
+}
+.imagecol{
+    padding: 0px;
+}
+.columnimage{
+    max-height: 100%;
+    max-width: 100%;
+}
+.row header h1{
+    margin-top: 0px;
+}
+.row header h1 a:link{
+    color: black;
+    text-decoration: none;
+}
+.row header h1 a:visited{
+    color: black;
+    text-decoration: none;
+}
+.row header h1 a:hover{
+    color: darkred;
+    text-decoration: none;
+}
+
+.row footer{
+    margin-top:15px;
+}
+.row header h1{
+    margin: 0px;
+}
+.row header {
+    margin-bottom: 25px;
+}
+/*.row div a img{
+    border-radius: 10px;
+}*/
+.articletext div{
+    margin-bottom: 0px;
+}
+.row  footer h5 span{
+    background-color: #292b2c;
+    border-radius: 5px;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row div footer span{
+    padding-right:20px;
+    font-family: Tahoma;
+}
+footer .text-center ul{
+    margin: 0px;
+    margin-bottom: 0px;
+}
+.site-footer{
+    width: 100%;
+}
+.secondcontainer{
+    min-height: 100%;
+}
+
+
+
+
+
+
+
+
+
