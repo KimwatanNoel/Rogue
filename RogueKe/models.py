@@ -9,7 +9,7 @@ class Home(models.Model):
     Date_Created = models.DateField()
 
     def __str__(self):
-        return self.Genre + self.Article + self.Author
+        return self.Title + self.Article + self.Author
 
 
 class Fashion(models.Model):
@@ -31,7 +31,7 @@ class Technology(models.Model):
     Date_Created = models.DateField()
 
     def __str__(self):
-        return self.Genre + self.Article + self.Author
+        return self.Title + self.Article + self.Author
 
 
 class Lifestyle(models.Model):
