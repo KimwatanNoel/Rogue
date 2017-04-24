@@ -59,10 +59,11 @@
 <div class = "container secondcontainer">
 
     <div class = "row ">
-        {% for fashion_item in fashion_items %}
+
         <div class = "col-md-6 col-sm-6 col-xs-12 imagecol "><a href="#">
             <img class ="columnimage" src = "{{ fashion_item.Fashion_Photo.url }}" /></a>
         </div>
+        {% for fashion_item in fashion_items %}
         <div class = "col-md-6 col-sm-6 col-xs-12 ">
             <article >
                 <!--REMEMBER Image Link Should be the same as header link-->
